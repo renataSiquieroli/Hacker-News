@@ -1,11 +1,9 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-
-//import RingLoader from "react-loader-spinner";
 import BarLoader from "react-spinners/BarLoader";
-
 import "./App.css";
+import NavBar from "./componentes/NavBar";
 
 function App() {
   return (
@@ -16,6 +14,7 @@ function App() {
         </div>
       </div>
       {/*NavBar */}
+      <NavBar />
       {/*Content (main page) */}
       {/* Footer */}
       {/* Search */}
