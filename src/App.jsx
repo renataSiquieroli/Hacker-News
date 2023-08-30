@@ -3,7 +3,11 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import BarLoader from "react-spinners/BarLoader";
 import "./App.css";
+
+import Content from "./componentes/Content";
+
 import NavBar from "./componentes/NavBar";
+
 
 function App() {
   return (
@@ -16,6 +20,7 @@ function App() {
       {/*NavBar */}
       <NavBar />
       {/*Content (main page) */}
+      <Content />
       {/* Footer */}
       {/* Search */}
     </>
