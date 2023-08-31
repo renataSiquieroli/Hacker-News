@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
 
 export default function Content() {
   const [currentData, setData] = useState([]);
+
+  const [currentPage, setCurrentPage] = useState(0); //pagination
+  const [totalPages, setTotalPages] = useState(0); //pagination
+  const itemsPerPage = 10; //pagination
+
   const pattern = /\w+\-?\w+?\.\w{2,}(\.\w+)?/;
   const shortLink = new RegExp(pattern);
 
@@ -13,17 +19,28 @@ export default function Content() {
     const data = await test.json();
 
     setData(data.hits);
+
+    setTotalPages(Math.ceil(data.hits.length / itemsPerPage)); //pagination
   };
 
   useEffect(() => {
     display();
   }, []);
 
+  const startIndex = currentPage * itemsPerPage; //pagination
+  const endIndex = startIndex + itemsPerPage; //pagination
+  const subset = currentData.slice(startIndex, endIndex); //pagination
+
+  const handlePageChange = (selectedPage) => {
+    //pagination
+    setCurrentPage(selectedPage.selected); //pagination
+  };
+
   return (
     <div>
       {
         <ol>
-          {currentData.map((datai) => (
+          {subset.map((datai) => (
             <li key={datai.author}>
               <div>
                 <h4
@@ -71,6 +88,11 @@ export default function Content() {
           ))}
         </ol>
       }
+      <ReactPaginate
+        pageCount={totalPages}
+        onPageChange={handlePageChange}
+        forcePage={currentPage}
+      />
     </div>
   );
 }
