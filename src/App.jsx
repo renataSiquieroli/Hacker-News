@@ -15,6 +15,7 @@ import SearchBar from "./componentes/SearchBar";
 import ListPage from "./componentes/ListPage";
 
 function App() {
+  console.log("from here starts the night mare");
   const [posts, setPosts] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   useEffect(() => {
