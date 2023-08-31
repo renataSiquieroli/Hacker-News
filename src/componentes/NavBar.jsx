@@ -3,7 +3,7 @@ export default function NavBar() {
     <div className="navbar">
       <div className="logo">
         <a href="">
-          <img src="src/assets/y18.sgv" alt="logo" />
+          <img src="/src/assets/y18.svg" alt="logo" />
         </a>
         <h4>Hacker News</h4>
       </div>
