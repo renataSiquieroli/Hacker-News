@@ -7,6 +7,7 @@ import "./App.css";
 import Content from "./componentes/Content";
 
 import NavBar from "./componentes/NavBar";
+import Footer from "./componentes/Footer";
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
       {/*Content (main page) */}
       <Content />
       {/* Footer */}
+      <Footer />
+
       {/* Search */}
     </>
   );

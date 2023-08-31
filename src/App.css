@@ -1,4 +1,3 @@
-
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -36,6 +35,7 @@
   width: 100%;
   flex-direction: row-reverse;
   margin-right: 2%;
+}
 
 .center,
 #cen {
@@ -43,4 +43,34 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+/* Footer */
+.footer-menu {
+  width: 100vw;
+}
+
+.footer-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: rgba(116, 115, 115, 0.92);
+  font-size: 0.8em;
+}
+
+.footer-menu a:hover {
+  color: #ff6600;
+  transition: 0.2s;
+}
+
+hr {
+  width: 100%;
+  height: 2.5px;
+  border: none;
+  background-color: #ff6600;
 }
