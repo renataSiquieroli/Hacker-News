@@ -1,4 +1,41 @@
-.center,
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 2.1em;
+  background-color: #ff6600;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: rgb(65, 62, 62);
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18%;
+}
+
+.login {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  margin-right: 2%;
+}
 #cen {
   display: flex;
   justify-content: center;
