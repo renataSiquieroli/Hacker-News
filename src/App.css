@@ -1,4 +1,3 @@
-
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -36,8 +35,7 @@
   width: 100%;
   flex-direction: row-reverse;
   margin-right: 2%;
-
-.center,
+}
 #cen {
   display: flex;
   justify-content: center;
