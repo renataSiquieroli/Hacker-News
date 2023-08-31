@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 export default function Content() {
   const [currentData, setData] = useState([]);
+  const pattern = /\w+\-?\w+?\.\w{2,}(\.\w+)?/;
+  const shortLink = new RegExp(pattern);
 
   const display = async () => {
     const test = await fetch("/src/assets/JSON-hacker-news/hackernews.json", {
@@ -31,12 +33,20 @@ export default function Content() {
                     textDecoration: "none",
                   }}
                 >
-                  {datai.title}{" "}
+                  <a
+                    style={{
+                      textDecoration: "none",
+                      color: "white",
+                    }}
+                    href={datai.url}
+                  >
+                    {datai.title}{" "}
+                  </a>
                   <a
                     style={{ textDecoration: "none", color: "grey" }}
                     href={datai.url}
                   >
-                    ({datai.url})
+                    ({datai.url === null ? "" : datai.url.match(shortLink)})
                   </a>
                 </h4>
                 <p
