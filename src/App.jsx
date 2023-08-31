@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import BarLoader from "react-spinners/BarLoader";
 import "./App.css";
 import NavBar from "./componentes/NavBar";
+import Footer from "./componentes/Footer";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <NavBar />
       {/*Content (main page) */}
       {/* Footer */}
+      <Footer />
+
       {/* Search */}
     </>
   );
